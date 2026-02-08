@@ -128,7 +128,7 @@ body {
 .artist-image-box {
     top: 25px;
     background: var(--card-bg);
-    padding: 20px;
+    padding: 10px;
     border-radius: 25px;
     /* Matches your rounded wireframe corners */
     display: flex;
@@ -147,18 +147,18 @@ body {
 }
 
 .artist-name {
-    top: 25px;
+    top: 20px;
     font-size: 1.4rem;
-    margin: 15px 0 15px 10px;
+    margin: 15px 0 50px 10px;
     /* Space around the text */
-    font-family: sans-serif;
+    font-family: 'Riffic Free', sans-serif;
 }
 
 /* Info Card & Inner Bio Box */
 .info-card {
     top: 25px;
     background: var(--card-bg);
-    padding: 15px;
+    padding: 13px;
     border-radius: 25px;
 }
 
@@ -180,6 +180,7 @@ body {
     padding: 15px;
     border-radius: 12px;
     font-weight: bold;
+    font-family: 'Riffic Free', sans-serif;
     cursor: pointer;
 }
 
@@ -190,6 +191,7 @@ body {
     background: var(--card-bg);
     border-radius: 25px;
     padding: 25px;
+    margin-left: 30px;
 }
 
 
@@ -234,6 +236,7 @@ body {
     padding: 10px 20px;
     cursor: pointer;
     font-weight: bold;
+    font-family: 'Riffic Free', sans-serif;
     color: black;
     /* Default color is black */
     transition: color 0.3s ease;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,25 +15,33 @@
         }
 
         .header {
-            background-color: #FE71A5; /* Vibrant Pink from image */
+            background-color: #FE71A5;
+            /* Vibrant Pink from image */
             padding: 15px 30px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
-        .logo-link {text-decoration: none; 
-        display: block; 
-        cursor: pointer; 
-        height: 55px;}
+        .logo-link {
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+            height: 55px;
+        }
 
-        .logo {height: 100px;            /* Increased size */
-        width: auto; 
-        display: block; 
-        margin-top: -20px;
-        margin-bottom: -10px;    /* Pulls the bottom edge up so the header doesn't expand */
-        position: relative;      /* Ensures it sits cleanly on top of other elements */
-        z-index: 1001;}
+        .logo {
+            height: 100px;
+            /* Increased size */
+            width: auto;
+            display: block;
+            margin-top: -20px;
+            margin-bottom: -10px;
+            /* Pulls the bottom edge up so the header doesn't expand */
+            position: relative;
+            /* Ensures it sits cleanly on top of other elements */
+            z-index: 1001;
+        }
 
         .search-container {
             position: relative;
@@ -49,7 +58,8 @@
             font-size: 16px;
             outline: none;
             background-color: white;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* White glow effect */
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            /* White glow effect */
         }
 
         .search-icon {
@@ -88,7 +98,7 @@
         }
 
         .nav-buttons .nav-btn:nth-child(2) img {
-            height: 21px; 
+            height: 21px;
             width: auto;
             display: block;
         }
@@ -102,7 +112,7 @@
             font-size: 36px;
             margin-bottom: 30px;
         }
-        
+
         .masonry-grid {
             column-count: 4;
             column-gap: 15px;
@@ -115,9 +125,9 @@
             width: 100%;
             display: inline-block;
         }
-    
     </style>
 </head>
+
 <body>
 
     <div class="header">
@@ -131,15 +141,15 @@
         </div>
 
         <div class="nav-buttons">
-        <a href="explore.html" class="nav-btn">
-            <img src="image1.jpeg" alt="Home">
-        </a>
-        <a href="orders.html" class="nav-btn">
-            <img src="image2.jpeg" alt="Orders">
-        </a>
-        <button class="nav-btn" type="button" style="cursor: pointer;">
-            <img src="image3.jpeg" alt="Settings">
-        </button>
+            <a href="explore.html" class="nav-btn">
+                <img src="image1.jpeg" alt="Home">
+            </a>
+            <a href="orders.html" class="nav-btn">
+                <img src="image2.jpeg" alt="Orders">
+            </a>
+            <button class="nav-btn" type="button" style="cursor: pointer;">
+                <img src="image3.jpeg" alt="Settings">
+            </button>
         </div>
 
         <!-- <div class="nav-buttons">
@@ -147,12 +157,12 @@
             <button class="nav-btn"><img src="image2.jpeg" alt="Cart"></button>
             <button class="nav-btn"><img src="image3.jpeg" alt="Settings"></button>
         </div> -->
-        
+
     </div>
 
     <main>
         <h1>Character Design</h1>
-        
+
         <div class="masonry-grid">
             <img src="cd images/cd1.jpg" class="grid-item" alt="cd1">
             <img src="cd images/cd2.jpg" class="grid-item" alt="cd2">
@@ -169,4 +179,5 @@
     </main>
 
 </body>
+
 </html>
