@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,18 +32,25 @@
             z-index: 1000;
         }
 
-        .logo-link {text-decoration: none; 
-        display: block; 
-        cursor: pointer; 
-        height: 55px;}
+        .logo-link {
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+            height: 55px;
+        }
 
-        .logo {height: 100px;            /* Increased size */
-        width: auto; 
-        display: block; 
-        margin-top: -20px;
-        margin-bottom: -10px;    /* Pulls the bottom edge up so the header doesn't expand */
-        position: relative;      /* Ensures it sits cleanly on top of other elements */
-        z-index: 1001;}
+        .logo {
+            height: 100px;
+            /* Increased size */
+            width: auto;
+            display: block;
+            margin-top: -20px;
+            margin-bottom: -10px;
+            /* Pulls the bottom edge up so the header doesn't expand */
+            position: relative;
+            /* Ensures it sits cleanly on top of other elements */
+            z-index: 1001;
+        }
 
         .search-container {
             position: relative;
@@ -72,7 +80,10 @@
         }
 
         /* --- Tab Navigation Icons --- */
-        .nav-buttons { display: flex; gap: 12px; }
+        .nav-buttons {
+            display: flex;
+            gap: 12px;
+        }
 
         .nav-btn {
             display: flex;
@@ -88,14 +99,27 @@
             transition: all 0.2s ease;
         }
 
-        .nav-btn:hover { transform: scale(1.1); }
+        .nav-btn:hover {
+            transform: scale(1.1);
+        }
 
-        .nav-btn img { height: 24px; }
-        .nav-buttons .nav-btn:nth-child(2) img { height: 21px; }
+        .nav-btn img {
+            height: 24px;
+        }
+
+        .nav-buttons .nav-btn:nth-child(2) img {
+            height: 21px;
+        }
 
         /* --- Content Layout from Block 1 --- */
-        [data-tab-content] { display: none; padding: 20px; }
-        .active[data-tab-content] { display: block; }
+        [data-tab-content] {
+            display: none;
+            padding: 20px;
+        }
+
+        .active[data-tab-content] {
+            display: block;
+        }
 
         /* Spotlight Section */
         .spotlight-row {
@@ -111,7 +135,8 @@
         .spotlight-card {
             min-width: 300px;
             height: 300px;
-            object-fit: cover; /*ensures images dont stretch*/
+            object-fit: cover;
+            /*ensures images dont stretch*/
             border-radius: 15px;
             flex-shrink: 0;
         }
@@ -131,19 +156,30 @@
             margin-bottom: 15px;
             border-radius: 15px;
             width: 100%;
-            display: block; /* ensures images fill the grid item */
+            display: block;
+            /* ensures images fill the grid item */
         }
 
-        .short { height: 150px; }
-        .medium { height: 250px; }
-        .tall { height: 350px; }
+        .short {
+            height: 150px;
+        }
 
-        h2 { 
+        .medium {
+            height: 250px;
+        }
+
+        .tall {
+            height: 350px;
+        }
+
+        h2 {
             font-family: 'Riffic Free', sans-serif;
-            margin-left: 10px; 
-            color: #555; }
+            margin-left: 10px;
+            color: #555;
+        }
     </style>
 </head>
+
 <body>
 
     <div class="header">
@@ -157,15 +193,15 @@
         </div>
 
         <div class="nav-buttons">
-        <a href="explore.html" class="nav-btn">
-            <img src="image1.jpeg" alt="Home">
-        </a>
-        <a href="orders.html" class="nav-btn">
-            <img src="image2.jpeg" alt="Orders">
-        </a>
-        <button class="nav-btn" type="button" style="cursor: pointer;">
-            <img src="image3.jpeg" alt="Settings">
-        </button>
+            <a href="explore.html" class="nav-btn">
+                <img src="image1.jpeg" alt="Home">
+            </a>
+            <a href="orders.html" class="nav-btn">
+                <img src="image2.jpeg" alt="Orders">
+            </a>
+            <button class="nav-btn" type="button" style="cursor: pointer;">
+                <img src="image3.jpeg" alt="Settings">
+            </button>
         </div>
     </div>
 
@@ -174,25 +210,25 @@
         <div class="spotlight-row">
             <!-- changed cards to images -->
             <a href="artistpage.html" class="interactive">
-            <img src="home-images/IMG_3764.JPG" alt="SpotLight 1" class="spotlight-card">
+                <img src="home-images/IMG_3764.JPG" alt="SpotLight 1" class="spotlight-card">
             </a>
 
             <div class="card interactive">
-                <img src="home-images/IMG_3775.JPG" alt ="SpotLight 2" class="spotlight-card">
+                <img src="home-images/IMG_3775.JPG" alt="SpotLight 2" class="spotlight-card">
             </div>
             <div class="card interactive">
-                <img src="home-images/IMG_3778.JPG" alt ="SpotLight 4" class="spotlight-card">
+                <img src="home-images/IMG_3778.JPG" alt="SpotLight 4" class="spotlight-card">
             </div>
             <div class="card interactive">
-                <img src="home-images/IMG_3765.JPG" alt ="SpotLight 3" class="spotlight-card">
+                <img src="home-images/IMG_3765.JPG" alt="SpotLight 3" class="spotlight-card">
             </div>
             <div class="card interactive">
-                <img src="home-images/IMG_3781.JPG" alt ="SpotLight 5" class="spotlight-card">
+                <img src="home-images/IMG_3781.JPG" alt="SpotLight 5" class="spotlight-card">
             </div>
             <div class="card interactive">
-                <img src="home-images/IMG_3782.JPG" alt ="SpotLight 6" class="spotlight-card">
+                <img src="home-images/IMG_3782.JPG" alt="SpotLight 6" class="spotlight-card">
             </div>
-            
+
         </div>
 
         <h2>Feed</h2>
@@ -230,4 +266,5 @@
         }
     </script>
 </body>
+
 </html>

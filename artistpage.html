@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seller Profile | Professional Portfolio</title>
     <link rel="stylesheet" href="artiststyle.css">
 </head>
+
 <body>
-<div class="profile-card">
-   <header class="main-nav">
-    <div class="nav-content">
+    <!-- HEADER (full width) -->
+    <div class="header">
         <a href="index.html" class="logo-link">
             <img src="ArtLogo.png" alt="ArtSpot Logo" class="logo">
         </a>
@@ -20,66 +21,85 @@
         </div>
 
         <div class="nav-buttons">
-        <a href="explore.html" class="nav-btn">
-            <img src="image1.jpeg" alt="Home">
-        </a>
-        <a href="orders.html" class="nav-btn">
-            <img src="image2.jpeg" alt="Orders">
-        </a>
-        <button class="nav-btn" type="button" style="cursor: pointer;">
-            <img src="image3.jpeg" alt="Settings">
-        </button>
+            <a href="explore.html" class="nav-btn">
+                <img src="image1.jpeg" alt="Home">
+            </a>
+            <a href="orders.html" class="nav-btn">
+                <img src="image2.jpeg" alt="Orders">
+            </a>
+            <button class="nav-btn" type="button" style="cursor: pointer;">
+                <img src="image3.jpeg" alt="Settings">
+            </button>
+        </div>
     </div>
-</header>
-<body></body>
-<div class="artist-page-container">
-    <aside class="sidebar">
-        
-        <div class="artist-image-box">
-             <img src="artist-pfp.jpg" alt="Artist" class="pfp-img" onerror="this.src='https://via.placeholder.com/150'">
-        </div>
 
-        <h1 class="artist-name">Artist name</h1>
-
-        <div class="info-card">
-            <div class="inner-bio-box">
-                <p class="intro-text">Artist's intro</p>
-                <div class="social-links">links for socials</div>
+    <!-- ARTIST PAGE CONTENT (centered, max-width) -->
+    <div class="artist-page-container">
+        <aside class="sidebar">
+            <div class="artist-image-box">
+                <img src="artist-pfp.jpg" alt="Artist" class="pfp-img">
             </div>
-            <button class="message-btn" id="contactBtn">Message me</button>
-        </div>
-    </aside>
 
-     <main class="portfolio-section">
-        <ul class="portfolio-tabs">
-            <li class="tab active" data-tab-target="#gallery">Gallery</li>
-            <li class="tab" data-tab-target="#contact-info">Contacts</li>
-        </ul>
+            <h1 class="artist-name">Artist name</h1>
 
-        <div id="gallery" data-tab-content class="active">
-            <div class="portfolio-grid">
-                <div class="grid-item"><img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/1-african-map-lanre-studio.jpg" alt="Work"></div>
-                <div class="grid-item"><img src="https://www.digitalmeetsculture.net/wp-content/uploads/2015/07/Folasade.jpg" alt="Work"></div>
-                <div class="grid-item"><img src="https://medias.artmajeur.com/standard/17551099_watercolor-painting-two-zulu-women-smiling-w-upscayl-4x-realesrgan-x4plus-anime.jpg?v=1738339009" alt="Work"></div>
-                <div class="grid-item"><img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/african-queen-bob-smerecki.jpg" alt="Work"></div>
-                <div class="grid-item"><img src="https://s3.pictorem.com/images/collection/L/LF3RNG8UBE/900_digital-arts_African_art_3.jpg" alt="Work"></div>
-                <div class="grid-item"><img src="https://globalvoices.org/wp-content/uploads/2016/05/african-digital.jpg" alt="Work"></div>
-                <div class="grid-item"><img src="https://image.okayafrica.com/?imageId=244144&width=1200" alt="Work"></div>
-                <div class="grid-item"><img src="https://img.freepik.com/free-photo/art-nouveau-portrait-beautiful-woman_23-2151467727.jpg?semt=ais_hybrid&w=740&q=80" alt="Work"></div>
-                <div class="grid-item"><img src="https://cdna.artstation.com/p/assets/images/images/006/675/002/large/katya-wagner-africa-day3.jpg?1500387799" alt="Work"></div>
+            <div class="info-card">
+                <div class="inner-bio-box">
+                    <p class="intro-text">Artist's intro</p>
+                    <div class="social-links">links for socials</div>
+                </div>
+                <button class="message-btn" id="contactBtn">Message me</button>
             </div>
-        </div>
+        </aside>
 
-        <div id="contact-info" data-tab-content>
-            <div class="contact-details-box">
-                <h3>Get in Touch</h3>
-                <p><strong>Email:</strong> artist@artspot.com</p>
-                <p><strong>Phone:</strong> +1 234 567 890</p>
-                <p><strong>Studio:</strong> 123 Creative Lane, Art City</p>
+        <main class="portfolio-section">
+            <ul class="portfolio-tabs">
+                <li class="tab active" data-tab-target="#gallery">Gallery</li>
+                <li class="tab" data-tab-target="#contact-info">Contacts</li>
+            </ul>
+
+            <div id="gallery" data-tab-content class="active">
+                <div class="portfolio-grid">
+                    <div class="grid-item"><img
+                            src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/1-african-map-lanre-studio.jpg"
+                            alt="Work"></div>
+                    <div class="grid-item"><img
+                            src="https://www.digitalmeetsculture.net/wp-content/uploads/2015/07/Folasade.jpg"
+                            alt="Work"></div>
+                    <div class="grid-item"><img
+                            src="https://medias.artmajeur.com/standard/17551099_watercolor-painting-two-zulu-women-smiling-w-upscayl-4x-realesrgan-x4plus-anime.jpg?v=1738339009"
+                            alt="Work"></div>
+                    <div class="grid-item"><img
+                            src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/african-queen-bob-smerecki.jpg"
+                            alt="Work"></div>
+                    <div class="grid-item"><img
+                            src="https://s3.pictorem.com/images/collection/L/LF3RNG8UBE/900_digital-arts_African_art_3.jpg"
+                            alt="Work"></div>
+                    <div class="grid-item"><img
+                            src="https://globalvoices.org/wp-content/uploads/2016/05/african-digital.jpg" alt="Work">
+                    </div>
+                    <div class="grid-item"><img src="https://image.okayafrica.com/?imageId=244144&width=1200"
+                            alt="Work"></div>
+                    <div class="grid-item"><img
+                            src="https://img.freepik.com/free-photo/art-nouveau-portrait-beautiful-woman_23-2151467727.jpg?semt=ais_hybrid&w=740&q=80"
+                            alt="Work"></div>
+                    <div class="grid-item"><img
+                            src="https://cdna.artstation.com/p/assets/images/images/006/675/002/large/katya-wagner-africa-day3.jpg?1500387799"
+                            alt="Work"></div>
+                </div>
             </div>
-        </div>
-    </main>
+
+            <div id="contact-info" data-tab-content>
+                <div class="contact-details-box">
+                    <h3>Get in Touch</h3>
+                    <p><strong>Email:</strong> artist@artspot.com</p>
+                    <p><strong>Phone:</strong> +1 234 567 890</p>
+                    <p><strong>Studio:</strong> 123 Creative Lane, Art City</p>
+                </div>
+            </div>
+        </main>
     </div>
+
     <script src="artistpagescript.js"></script>
 </body>
+
 </html>

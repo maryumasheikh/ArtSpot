@@ -1,47 +1,50 @@
 /* Color variables to match your wireframe */
 :root {
-    --artspot-pink: #ff66aa; /* Header & Button color */
-    --card-bg: #d9d9d9;      /* Light grey containers */
-    --inner-bg: #bfbfbf;  
-       /* Darker grey inner boxes */
+    --artspot-pink: #ff66aa;
+    /* Header & Button color */
+    --card-bg: #d9d9d9;
+    /* Light grey containers */
+    --inner-bg: #bfbfbf;
+    /* Darker grey inner boxes */
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-.main-nav{
-    background-color: #FE71A5; /* Vibrant Pink from image */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFFCFD;
+}
+
+.header {
+    background-color: #FE71A5;
     padding: 15px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
-
-.nav-content {
-    display: flex;
-    align-items: center;    /* Vertically centers everything in the pink bar */
-    justify-content: space-between; /* Aligns items to the left/start */
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 20px
-    
-}
-
 
 .logo-link {
-    text-decoration: none; 
-        display: block; 
-        cursor: pointer; 
-        height: 55px;}
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    height: 55px;
+}
 
-.logo {height: 100px;            /* Increased size */
-    width: auto; 
-    display: block; 
+.logo {
+    height: 100px;
+    width: auto;
+    display: block;
     margin-top: -20px;
-    margin-bottom: -10px;    /* Pulls the bottom edge up so the header doesn't expand */
-    position: relative;      /* Ensures it sits cleanly on top of other elements */
-    z-index: 1001;}
-
-
+    margin-bottom: -10px;
+    position: relative;
+    z-index: 1001;
+}
 
 .search-container {
     position: relative;
@@ -49,76 +52,62 @@
     max-width: 700px;
     margin: 0 40px;
 }
+
 .search-container input {
     width: 100%;
     padding: 10px 15px 10px 45px;
     border-radius: 10px;
-    width: 600px;
     border: none;
-    height: 20px;
-    max-width: 700px;
     font-size: 16px;
     outline: none;
     background-color: white;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
-
-
 .search-icon {
     position: absolute;
-    left: 50  px;
+    left: 15px;
     top: 50%;
     transform: translateY(-50%);
     height: 23px;
     opacity: 1;
 }
 
-
-.search-icon-circle img {
-    width: 20px;            /* Size of the actual magnifying glass */
-    height: 20px;
-    opacity: 0.6;  
-    
+.nav-buttons {
+    display: flex;
+    gap: 12px;
 }
 
+.nav-btn {
+    background: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
 
+.nav-btn:hover {
+    transform: scale(1.05);
+}
 
-.nav-buttons {
-            display: flex;
-            gap: 12px;
-        }
+.nav-btn img {
+    height: 24px;
+}
 
-        .nav-btn {
-            background: white;
-            border-radius: 50%;
-            width: 45px;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .nav-btn:hover {
-            transform: scale(1.05);
-        }
-
-        .nav-btn img {
-            height: 24px;
-        }
-
-        .nav-buttons .nav-btn:nth-child(2) img {
-            height: 21px; 
-            width: auto;
-            display: block;
-        }
+.nav-buttons .nav-btn:nth-child(2) img {
+    height: 21px;
+    width: auto;
+    display: block;
+}
 
 /* Layout Container */
 .artist-page-container {
-  
+
     display: flex;
     gap: 20px;
     padding: 20px;
@@ -128,7 +117,7 @@
 
 /* Sidebar Layout */
 .sidebar {
-    top:25px;
+    top: 25px;
     width: 250px;
     display: flex;
     flex-direction: column;
@@ -137,50 +126,54 @@
 
 /* THE ARTIST IMAGE BOX: Styling for the top sidebar container */
 .artist-image-box {
-    top:25px;
+    top: 25px;
     background: var(--card-bg);
     padding: 20px;
-    border-radius: 25px; /* Matches your rounded wireframe corners */
+    border-radius: 25px;
+    /* Matches your rounded wireframe corners */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .pfp-img {
-    top:25px;
+    top: 25px;
     width: 100%;
-    aspect-ratio: 1/1; /* Keeps the image square */
+    aspect-ratio: 1/1;
+    /* Keeps the image square */
     border-radius: 15px;
     background: var(--inner-bg);
     object-fit: cover;
 }
 
 .artist-name {
-    top:25px;
+    top: 25px;
     font-size: 1.4rem;
-    margin: 15px 0 15px 10px; /* Space around the text */
+    margin: 15px 0 15px 10px;
+    /* Space around the text */
     font-family: sans-serif;
 }
 
 /* Info Card & Inner Bio Box */
 .info-card {
-    top:25px;
+    top: 25px;
     background: var(--card-bg);
     padding: 15px;
     border-radius: 25px;
 }
 
 .inner-bio-box {
-    top:25px;
+    top: 25px;
     background: var(--inner-bg);
     border-radius: 15px;
     padding: 20px;
-    min-height: 250px; /* Height for the bio area */
+    min-height: 250px;
+    /* Height for the bio area */
     margin-bottom: 15px;
 }
 
 .message-btn {
-    top:25px;
+    top: 25px;
     background-color: var(--artspot-pink);
     border: none;
     width: 100%;
@@ -192,7 +185,7 @@
 
 /* Portfolio Grid: Right side */
 .portfolio-section {
-    top:25px;
+    top: 25px;
     flex-grow: 1;
     background: var(--card-bg);
     border-radius: 25px;
@@ -201,24 +194,27 @@
 
 
 .portfolio-grid {
-    top:25px;
+    top: 25px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Keeps it 3 columns */
+    grid-template-columns: repeat(3, 1fr);
+    /* Keeps it 3 columns */
     gap: 15px;
-    max-width: 800px; /* Limits how wide the whole grid can get */
+    max-width: 800px;
+    /* Limits how wide the whole grid can get */
     margin: 0 auto;
 }
 
 .grid-item {
-    top:25px;
+    top: 25px;
     background: var(--inner-bg);
-    aspect-ratio: 1/1; /* Keeps grid slots square */
+    aspect-ratio: 1/1;
+    /* Keeps grid slots square */
     border-radius: 15px;
 }
 
 /* Portfolio Grid: Right side */
 .portfolio-section {
-    top:25px;
+    top: 25px;
     flex-grow: 1;
     background: var(--card-bg);
     border-radius: 25px;
@@ -226,7 +222,7 @@
 }
 
 .portfolio-tabs {
-    top:25px;
+    top: 25px;
     display: flex;
     list-style: none;
     padding: 0;
@@ -238,41 +234,52 @@
     padding: 10px 20px;
     cursor: pointer;
     font-weight: bold;
-    color: black;          /* Default color is black */
-    transition: color 0.3s ease; /* Smooth color transition */
-    border-bottom: 3px solid transparent; /* Hidden border by default */
+    color: black;
+    /* Default color is black */
+    transition: color 0.3s ease;
+    /* Smooth color transition */
+    border-bottom: 3px solid transparent;
+    /* Hidden border by default */
 }
 
 /* Active state when clicked (Pink) */
 .tab.active {
-    color: var(--artspot-pink); /* Changes text to pink */
-    border-bottom: 3px solid var(--artspot-pink); /* Pink underline */
+    color: var(--artspot-pink);
+    /* Changes text to pink */
+    border-bottom: 3px solid var(--artspot-pink);
+    /* Pink underline */
 }
 
-[data-tab-content] { 
-    display: none; 
-}
-.active[data-tab-content] { 
-    display: block; 
+[data-tab-content] {
+    display: none;
 }
 
-.portfolio-grid { 
-    top:25px;
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; 
+.active[data-tab-content] {
+    display: block;
 }
 
-.grid-item img { 
-    top:25px;
-    width: 100%;       /* Fill the square slot */
-    height: 100%;      /* Fill the square slot */
-    object-fit: cover; /* Prevents stretching */
+.portfolio-grid {
+    top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.grid-item img {
+    top: 25px;
+    width: 100%;
+    /* Fill the square slot */
+    height: 100%;
+    /* Fill the square slot */
+    object-fit: cover;
+    /* Prevents stretching */
     display: block;
     border-radius: 15px;
 }
 
 /* Styling for the Contacts box */
 .contact-details-box {
-    top:25px;
+    top: 25px;
     background: var(--inner-bg);
     padding: 30px;
     border-radius: 15px;
