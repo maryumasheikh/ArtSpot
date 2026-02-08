@@ -1,19 +1,110 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore - ArtSpot</title>
-
-    <link rel="stylesheet" href="explore.css">
-    
-</head>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArtSpot Explore</title>
-    <link rel="stylesheet" href="explorestyle.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #ff85a2; /* The pink from your wireframe */
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+            color: #000;
+        }
+
+        .logo span {
+            font-weight: normal;
+        }
+
+        .search-bar {
+            background: white;
+            height: 35px;
+            width: 40%;
+            border-radius: 20px;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        /* Main Layout */
+        main {
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        /* Grid System */
+        .explore-grid {
+            display: grid;
+            /* This creates columns that wrap automatically */
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: #c4c4c4; /* Gray placeholder color */
+            height: 200px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        /* Interaction for cards */
+        .interactive:hover {
+            transform: scale(1.03);
+            background-color: #b0b0b0;
+            cursor: pointer;
+        }
+
+        .card span {
+            pointer-events: none; /* ensures click hits the card/link */
+        }
+
+        /* Pinterest Masonry Layout (Reserved for future use) */
+        .explore-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-auto-rows: 200px;
+            grid-gap: 15px;
+            padding: 20px;
+        }
+
+        .tall { grid-row: span 2; }
+        .wide { grid-column: span 2; }
+    </style>
 </head>
 <body>
 
@@ -48,47 +139,4 @@
     </main>
 
 </body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtSpot Explore</title>
-    <link rel="stylesheet" href="explorestyle.css">
-</head>
-<body>
-
-    <header class="navbar">
-        <div class="logo">art<span>SPOT</span></div>
-        <div class="search-bar"></div>
-        <div class="nav-icons">
-            <div class="icon"></div>
-            <div class="icon"></div>
-            <div class="icon"></div>
-        </div>
-    </header>
-
-    <main>
-        <h1>Explore</h1>
-        
-        <div class="explore-grid">
-            <div class="card interactive"><span>3D Art</span></div>
-            <div class="card interactive"><span>Animation</span></div>
-            
-            <a href="character-design.html" class="card interactive">
-                <span>Character Design</span>
-            </a>
-
-            <div class="card interactive"><span>Concept Art</span></div>
-            <div class="card interactive"><span>Fan Art</span></div>
-            <div class="card interactive"><span>Logo Design</span></div>
-            <div class="card interactive"><span>Pixel Art</span></div>
-            <div class="card interactive"><span>Tattoo Designs</span></div>
-            <div class="card interactive"><span>Styles</span></div>
-        </div>
-    </main>
-
-</body>
->>>>>>> 36680655e72be6b57f2a795d9416115fce7e9b6c
 </html>
