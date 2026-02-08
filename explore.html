@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.cdnfonts.com/css/riffic-free" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArtSpot Explore</title>
     <style>
@@ -99,6 +100,7 @@
         }
 
         h1 {
+            font-family: 'Riffic Free', sans-serif;                               
             font-size: 36px;
             margin-bottom: 30px;
         }
@@ -116,12 +118,15 @@
             height: 300px;
             border-radius: 20px;
             display: flex;
+            flex-direction: column;  /* stacks image and text vertically */
             align-items: center;
             justify-content: center;
             text-decoration: none;
             color: #333;
             font-weight: bold;
             transition: transform 0.2s ease, background-color 0.2s ease;
+            overflow: hidden;  /* keeps image inside the card */
+            position: relative;  /* for positioning text over image */
         }
 
         .interactive:hover {
@@ -130,8 +135,23 @@
             cursor: pointer;
         }
 
+        .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;  /* Makes image fill the card without stretching */
+        position: absolute;  /* Positions image as background */
+        top: 0;
+        left: 0;
+        z-index: 1;
+}
+
         .card span {
-            pointer-events: none;
+        position: relative;  /* Brings text in front of image */
+        z-index: 2;
+        color: white;  /* Makes text readable on image */
+        font-size: 24px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.7);  /* Adds shadow so text stands out */
+        pointer-events: none;
         }
     </style>
 </head>
@@ -171,19 +191,37 @@
         <h1>Explore</h1>
         
         <div class="explore-grid">
-            <div class="card interactive"><span>3D Art</span></div>
-            <div class="card interactive"><span>Animation</span></div>
+            <div class="card interactive">
+                <img src="explore images/3d-art.jpg" alt="3D Art">
+                <span>3D Art</span></div>
+            <div class="card interactive">
+                <img src="explore images/animation.gif" alt="Animation">
+                <span>Animation</span></div>
             
             <a href="character-design.html" class="card interactive">
+                <img src="explore images/character-design.jpg" alt="Character Design">
                 <span>Character Design</span>
             </a>
 
-            <div class="card interactive"><span>Concept Art</span></div>
-            <div class="card interactive"><span>Fan Art</span></div>
-            <div class="card interactive"><span>Logo Design</span></div>
-            <div class="card interactive"><span>Pixel Art</span></div>
-            <div class="card interactive"><span>Tattoo Designs</span></div>
-            <div class="card interactive"><span>Styles</span></div>
+            <div class="card interactive">
+                <img src="explore images/concept-art.jpg" alt="Concept Art">
+                <span>Concept Art</span></div>
+                
+            <div class="card interactive">
+                <img src="explore images/fan-art.jpg" alt="Fan Art">
+                <span>Fan Art</span></div>
+            <div class="card interactive">
+                <img src="explore images/logo-design.jpg" alt="Logo Design">
+                <span>Logo Design</span></div>
+            <div class="card interactive">
+                <img src="explore images/pixel-art.jpg" alt="Pixel Art">
+                <span>Pixel Art</span></div>
+            <div class="card interactive">
+                <img src="explore images/tattoo-design.jpg" alt="Tattoo Design">
+                <span>Tattoo Designs</span></div>
+            <div class="card interactive">
+                <img src="explore images/styles.jpg" alt="Styles">
+                <span>Styles</span></div>
         </div>
     </main>
 

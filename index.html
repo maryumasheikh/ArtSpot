@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/riffic-free" rel="stylesheet">
     <title>ArtSpot - Explore</title>
     <style>
         /* Variables from Block 1 integrated with Block 2 colors */
@@ -115,6 +116,11 @@
             flex-shrink: 0;
         }
 
+        .interactive:hover {
+            transform: scale(1.03);
+            cursor: pointer;
+        }
+
         /* Masonry Grid */
         .masonry-grid {
             column-count: 4;
@@ -132,7 +138,10 @@
         .medium { height: 250px; }
         .tall { height: 350px; }
 
-        h2 { margin-left: 10px; color: #555; }
+        h2 { 
+            font-family: 'Riffic Free', sans-serif;
+            margin-left: 10px; 
+            color: #555; }
     </style>
 </head>
 <body>
@@ -164,12 +173,26 @@
         <h2>Artist Spotlight</h2>
         <div class="spotlight-row">
             <!-- changed cards to images -->
-            <img src="home-images/IMG_3764.JPG" alt ="SpotLight 1" class="spotlight-card">
-            <img src="home-images/IMG_3775.JPG" alt ="SpotLight 2" class="spotlight-card">
-            <img src="home-images/IMG_3778.JPG" alt ="SpotLight 4" class="spotlight-card">
-            <img src="home-images/IMG_3765.JPG" alt ="SpotLight 3" class="spotlight-card">
-            <img src="home-images/IMG_3781.JPG" alt ="SpotLight 5" class="spotlight-card">
-            <img src="home-images/IMG_3782.JPG" alt ="SpotLight 6" class="spotlight-card">
+            <a href="artistpage.html" class="interactive">
+            <img src="home-images/IMG_3764.JPG" alt="SpotLight 1" class="spotlight-card">
+            </a>
+
+            <div class="card interactive">
+                <img src="home-images/IMG_3775.JPG" alt ="SpotLight 2" class="spotlight-card">
+            </div>
+            <div class="card interactive">
+                <img src="home-images/IMG_3778.JPG" alt ="SpotLight 4" class="spotlight-card">
+            </div>
+            <div class="card interactive">
+                <img src="home-images/IMG_3765.JPG" alt ="SpotLight 3" class="spotlight-card">
+            </div>
+            <div class="card interactive">
+                <img src="home-images/IMG_3781.JPG" alt ="SpotLight 5" class="spotlight-card">
+            </div>
+            <div class="card interactive">
+                <img src="home-images/IMG_3782.JPG" alt ="SpotLight 6" class="spotlight-card">
+            </div>
+            
         </div>
 
         <h2>Feed</h2>
