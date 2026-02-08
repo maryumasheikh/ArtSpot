@@ -5,51 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArtSpot Explore</title>
     <style>
+        /* --- YOUR HEADER STYLES --- */
         body {
-            margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ffffff;
+            margin: 0;
+            background-color: #FFFCFD;
+            color: #333;
         }
 
-        /* Navbar Styling */
-        .navbar {
-            background-color: #ff85a2; /* The pink from your wireframe */
-            padding: 15px 40px;
+        .header {
+            background-color: #FE71A5; /* Vibrant Pink from image */
+            padding: 15px 30px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
+        .logo-link {
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+        }
+
         .logo {
-            font-weight: bold;
-            font-size: 24px;
-            color: #000;
+            height: 55px;
+            width: auto;
+            display: block;
         }
 
-        .logo span {
-            font-weight: normal;
+        .search-container {
+            position: relative;
+            flex-grow: 1;
+            max-width: 700px;
+            margin: 0 40px;
         }
 
-        .search-bar {
-            background: white;
-            height: 35px;
-            width: 40%;
-            border-radius: 20px;
+        .search-container input {
+            width: 100%;
+            padding: 10px 15px 10px 45px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* White glow effect */
         }
 
-        .nav-icons {
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 23px;
+            opacity: 1;
+        }
+
+        .nav-buttons {
             display: flex;
-            gap: 15px;
+            gap: 12px;
         }
 
-        .icon {
-            width: 30px;
-            height: 30px;
+        .nav-btn {
             background: white;
             border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s;
         }
 
-        /* Main Layout */
+        .nav-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-btn img {
+            height: 24px;
+        }
+
+        .nav-buttons .nav-btn:nth-child(2) img {
+            height: 21px; 
+            width: auto;
+            display: block;
+        }
+
+        /* --- EXPLORE CONTENT STYLES --- */
         main {
             padding: 40px;
         }
@@ -59,10 +102,8 @@
             margin-bottom: 30px;
         }
 
-        /* Grid System */
         .explore-grid {
             display: grid;
-            /* This creates columns that wrap automatically */
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
             max-width: 1400px;
@@ -82,7 +123,6 @@
             transition: transform 0.2s ease, background-color 0.2s ease;
         }
 
-        /* Interaction for cards */
         .interactive:hover {
             transform: scale(1.03);
             background-color: #b0b0b0;
@@ -90,33 +130,28 @@
         }
 
         .card span {
-            pointer-events: none; /* ensures click hits the card/link */
+            pointer-events: none;
         }
-
-        /* Pinterest Masonry Layout (Reserved for future use) */
-        .explore-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            grid-auto-rows: 200px;
-            grid-gap: 15px;
-            padding: 20px;
-        }
-
-        .tall { grid-row: span 2; }
-        .wide { grid-column: span 2; }
     </style>
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo">art<span>SPOT</span></div>
-        <div class="search-bar"></div>
-        <div class="nav-icons">
-            <div class="icon"></div>
-            <div class="icon"></div>
-            <div class="icon"></div>
+    <div class="header">
+        <a href="index.html" class="logo-link">
+            <img src="ArtLogo.png" alt="ArtSpot Logo" class="logo">
+        </a>
+
+        <div class="search-container">
+            <img src="search.png" alt="search" class="search-icon">
+            <input type="text" placeholder="Search...">
         </div>
-    </header>
+
+        <div class="nav-buttons">
+            <button class="nav-btn"><img src="image1.jpeg" alt="Home"></button>
+            <button class="nav-btn"><img src="image2.jpeg" alt="Cart"></button>
+            <button class="nav-btn"><img src="image3.jpeg" alt="Settings"></button>
+        </div>
+    </div>
 
     <main>
         <h1>Explore</h1>
