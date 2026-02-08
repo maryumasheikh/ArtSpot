@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtSpot - Explore</title>
+    <style>
+        /* Variables from Block 1 integrated with Block 2 colors */
+        :root {
+            --art-pink: #FE71A5;
+            --light-gray: #d9d9d9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #FFFCFD;
+            color: #333;
+        }
+
+        /* --- Header Aesthetics from Block 2 --- */
+        .header {
+            background-color: var(--art-pink);
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-link { text-decoration: none; display: block; cursor: pointer; }
+        .logo { height: 55px; width: auto; display: block; }
+
+        .search-container {
+            position: relative;
+            flex-grow: 1;
+            max-width: 700px;
+            margin: 0 40px;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 10px 15px 10px 45px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 23px;
+            opacity: 1;
+        }
+
+        /* --- Tab Navigation Icons --- */
+        .nav-buttons { display: flex; gap: 12px; }
+
+        .nav-btn {
+            display: flex;
+            text-decoration: none;
+            background: white;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .nav-btn:hover { transform: scale(1.1); }
+
+        .nav-btn img { height: 24px; }
+        .nav-buttons .nav-btn:nth-child(2) img { height: 21px; }
+
+        /* --- Content Layout from Block 1 --- */
+        [data-tab-content] { display: none; padding: 20px; }
+        .active[data-tab-content] { display: block; }
+
+        /* Spotlight Section */
+        .spotlight-row {
+            background-color: var(--light-gray);
+            display: flex;
+            gap: 30px;
+            padding: 20px;
+            border-radius: 15px;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+
+        .spotlight-card {
+            min-width: 300px;
+            height: 300px;
+            background-color: #bbb;
+            border-radius: 15px;
+            flex-shrink: 0;
+        }
+
+        /* Masonry Grid */
+        .masonry-grid {
+            column-count: 4;
+            column-gap: 15px;
+        }
+
+        .grid-item {
+            background-color: var(--light-gray);
+            margin-bottom: 15px;
+            border-radius: 15px;
+            width: 100%;
+            display: inline-block;
+        }
+
+        .short { height: 150px; }
+        .medium { height: 250px; }
+        .tall { height: 350px; }
+
+        h2 { margin-left: 10px; color: #555; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <a href="index.html" class="logo-link">
+            <img src="ArtLogo.png" alt="ArtSpot Logo" class="logo">
+        </a>
+
+        <div class="search-container">
+            <img src="search.png" alt="search" class="search-icon">
+            <input type="text" placeholder=" ">
+        </div>
+
+        <div class="nav-buttons">
+        <a href="explore.html" class="nav-btn">
+            <img src="image1.jpeg" alt="Explore">
+        </a>
+        <a href="orders.html" class="nav-btn">
+            <img src="image2.jpeg" alt="Orders">
+        </a>
+            <button class="nav-btn" onclick="openSettings()">
+                <img src="image3.jpeg" alt="Settings">
+            </button>
+        </div>
+    </div>
+
+    <div id="explore" class="active" data-tab-content>
+        <h2>Artist Spotlight</h2>
+        <div class="spotlight-row">
+            <div class="spotlight-card"></div>
+            <div class="spotlight-card"></div>
+            <div class="spotlight-card"></div>
+            <div class="spotlight-card"></div>
+        </div>
+
+        <h2>Feed</h2>
+        <div class="masonry-grid">
+            <div class="grid-item tall"></div>
+            <div class="grid-item medium"></div>
+            <div class="grid-item short"></div>
+            <div class="grid-item tall"></div>
+            <div class="grid-item medium"></div>
+            <div class="grid-item tall"></div>
+            <div class="grid-item short"></div>
+            <div class="grid-item medium"></div>
+        </div>
+    </div>
+
+    <div id="orders" data-tab-content>
+        <h2>My Orders</h2>
+        <div style="background: var(--light-gray); padding: 40px; border-radius: 15px; text-align: center;">
+            <p>You have no active orders.</p>
+        </div>
+    </div>
+
+    <div id="settings" data-tab-content>
+        <h2>Account Settings</h2>
+        <div style="background: var(--light-gray); padding: 40px; border-radius: 15px;">
+            <p>Profile Customization</p>
+            <p>Payment Methods</p>
+            <p>Notifications</p>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabId, btn) {
+            // Hide all content
+            const contents = document.querySelectorAll('[data-tab-content]');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+
+            // Show selected tab and activate button
+            document.getElementById(tabId).classList.add('active');
+            btn.classList.add('active');
+        }
+    </script>
+</body>
+</html>

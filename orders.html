@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtSpot - My Orders</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #FFFCFD;
+            color: #333;
+        }
+
+        /* --- Header Styling (From Code 2) --- */
+        .header {
+            background-color: #FE71A5; /* Vibrant Pink from image */
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+	.logo-link {
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+        }
+
+        .logo {
+            height: 55px;
+            width: auto;
+            display: block;
+        }
+
+        .search-container {
+            position: relative;
+            flex-grow: 1;
+            max-width: 700px;
+            margin: 0 40px;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 10px 15px 10px 45px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* White glow effect */
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 23px;
+            opacity: 1;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-btn {
+            background: white;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .nav-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-btn img {
+            height: 24px;
+            /* Colors icons pink to match theme */
+        }
+
+	.nav-buttons .nav-btn:nth-child(2) img {
+            height: 21px; /* Making ONLY the cart icon bigger */
+	    width: auto;
+	    display: block;
+        }
+
+        
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        /* Order Card */
+        .order-card {
+            background-color: #dbdbdb;
+            border-radius: 10px;
+            padding: 15px 25px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .order-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-pic {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .text-details p {
+            margin: 0;
+        }
+
+        .order-id {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 4px !important;
+        }
+
+        .last-message {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Status Buttons */
+        .status-pill {
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .in-progress { background-color: #f08a8a; color: #000; }
+        .complete { background-color: #f5d76e; color: #000; }
+        .delivered { background-color: #5bbd8f; color: #000; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+      <a href="index.html" class="logo-link">
+        <img src="ArtLogo.png" alt="ArtSpot Logo" class="logo">
+      </a>
+
+        <div class="search-container">
+            <img src="search.png" alt="search" class="search-icon">
+            <input type="text" placeholder=" ">
+        </div>
+
+        <div class="nav-buttons">
+            <button class="nav-btn"><img src="image1.jpeg" alt="Home"></button>
+            <button class="nav-btn"><img src="image2.jpeg" alt="Cart"></button>
+            <button class="nav-btn"><img src="image3.jpeg" alt="Settings"></button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Orders</h1>
+
+        <div class="order-card">
+            <div class="order-info">
+                <div class="profile-pic"></div>
+                <div class="text-details">
+                    <p class="order-id">Order #000085435</p>
+                    <p class="last-message">When do you need the commission done by?</p>
+                </div>
+            </div>
+            <div class="status-pill in-progress">In Progress</div>
+        </div>
+
+        <div class="order-card">
+            <div class="order-info">
+                <div class="profile-pic"></div>
+                <div class="text-details">
+                    <p class="order-id">Order #000085436</p>
+                    <p class="last-message">I'm in love with it! I'll recommend you to my other friend who...</p>
+                </div>
+            </div>
+            <div class="status-pill delivered">✔ Delivered</div>
+        </div>
+
+        <div class="order-card">
+            <div class="order-info">
+                <div class="profile-pic"></div>
+                <div class="text-details">
+                    <p class="order-id">Order #000085440</p>
+                    <p class="last-message">I just finished, I'll send the work soon!</p>
+                </div>
+            </div>
+            <div class="status-pill complete">complete</div>
+        </div>
+
+        <div class="order-card">
+            <div class="order-info">
+                <div class="profile-pic"></div>
+                <div class="text-details">
+                    <p class="order-id">Order #000085437</p>
+                    <p class="last-message">I just sent you the background I wanted.</p>
+                </div>
+            </div>
+            <div class="status-pill in-progress">In Progress</div>
+        </div>
+
+        <div class="order-card">
+            <div class="order-info">
+                <div class="profile-pic"></div>
+                <div class="text-details">
+                    <p class="order-id">Order #000085438</p>
+                    <p class="last-message">Could you create a banner with this color scheme?</p>
+                </div>
+            </div>
+            <div class="status-pill in-progress">In Progress</div>
+        </div>
+
+        <div class="order-card">
+            <div class="order-info">
+                <div class="profile-pic"></div>
+                <div class="text-details">
+                    <p class="order-id">Order #000085439</p>
+                    <p class="last-message">I love it so much, thank you!</p>
+                </div>
+            </div>
+            <div class="status-pill delivered">✔ Delivered</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

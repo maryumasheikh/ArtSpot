@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Profile | Professional Portfolio</title>
+    <link rel="stylesheet" href="artiststyle.css">
+</head>
+<body>
+<div class="profile-card">
+   <header class="main-nav">
+    <div class="nav-content">
+        <div class="logo">artSPOT</div>
+        <input type="text" class="search-bar" placeholder="Search...">
+        <div class="nav-icons">
+            <div class="circle-icon"></div>
+            <div class="circle-icon"></div>
+            <div class="circle-icon"></div>
+        </div>
+    </div>
+</header>
+
+<div class="artist-page-container">
+    <aside class="sidebar">
+        
+        <div class="artist-image-box">
+             <img src="artist-pfp.jpg" alt="Artist" class="pfp-img" onerror="this.src='https://via.placeholder.com/150'">
+        </div>
+
+        <h1 class="artist-name">Artist name</h1>
+
+        <div class="info-card">
+            <div class="inner-bio-box">
+                <p class="intro-text">Artist's intro</p>
+                <div class="social-links">links for socials</div>
+            </div>
+            <button class="message-btn" id="contactBtn">Message me</button>
+        </div>
+    </aside>
+
+     <main class="portfolio-section">
+        <ul class="portfolio-tabs">
+            <li class="tab active" data-tab-target="#gallery">Gallery</li>
+            <li class="tab" data-tab-target="#contact-info">Contacts</li>
+        </ul>
+
+        <div id="gallery" data-tab-content class="active">
+            <div class="portfolio-grid">
+                <div class="grid-item"><img src="https://via.placeholder.com/300" alt="Work"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/300" alt="Work"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/300" alt="Work"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/300" alt="Work"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/300" alt="Work"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/300" alt="Work"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/300" alt="Work"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/300" alt="Work"></div>
+                <div class="grid-item"><img src="https://via.placeholder.com/300" alt="Work"></div>
+            </div>
+        </div>
+
+        <div id="contact-info" data-tab-content>
+            <div class="contact-details-box">
+                <h3>Get in Touch</h3>
+                <p><strong>Email:</strong> artist@artspot.com</p>
+                <p><strong>Phone:</strong> +1 234 567 890</p>
+                <p><strong>Studio:</strong> 123 Creative Lane, Art City</p>
+            </div>
+        </div>
+    </main>
+    </div>
+    <script src="artistpagescript.js"></script>
+</body>
+</html>

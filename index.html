@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtSpot</title>
+    <style>
+        /* --- Styles from Code Block 2 --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #FFFCFD;
+            color: #333;
+        }
+
+        .header {
+            background-color: #FE71A5; /* Vibrant Pink */
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-link {
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+        }
+
+        .logo {
+            height: 55px;
+            width: auto;
+            display: block;
+        }
+
+        .search-container {
+            position: relative;
+            flex-grow: 1;
+            max-width: 700px;
+            margin: 0 40px;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 10px 15px 10px 45px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 23px;
+            opacity: 1;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-btn {
+            background: white;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .nav-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-btn img {
+            height: 24px;
+        }
+
+        /* Target the Cart Icon size specifically */
+        .nav-buttons .nav-btn:nth-child(2) img {
+            height: 21px; 
+            width: auto;
+            display: block;
+        }
+
+        /* --- Tab Layout Styles from Block 1 --- */
+        [data-tab-content] {
+            display: none;
+            padding: 20px;
+        }
+
+        .active[data-tab-content] {
+            display: block;
+        }
+
+        .spotlight-section { padding: 20px; }
+        .spotlight-row {
+            background-color: #d9d9d9;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            border-radius: 15px;
+            overflow-x: auto;
+        }
+        .spotlight-card {
+            min-width: 200px;
+            height: 200px;
+            background-color: #bbb;
+            border-radius: 15px;
+            flex-shrink: 0;
+        }
+
+        .masonry-grid {
+            padding: 20px;
+            column-count: 4;
+            column-gap: 15px;
+        }
+        .grid-item {
+            background-color: #d9d9d9;
+            margin-bottom: 15px;
+            border-radius: 15px;
+            width: 100%;
+            display: inline-block;
+        }
+        .short { height: 150px; }
+        .medium { height: 250px; }
+        .tall { height: 350px; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo-link">
+            <img src="ArtLogo.png" alt="ArtSpot Logo" class="logo">
+        </a>
+
+        <div class="search-container">
+            <img src="search.png" alt="search" class="search-icon">
+            <input type="text" placeholder=" ">
+        </div>
+
+        <div class="nav-buttons">
+            <button class="nav-btn" onclick="openTab('home')">
+                <img src="image1.jpeg" alt="Home">
+            </button>
+            <button class="nav-btn" onclick="openTab('orders')">
+                <img src="image2.jpeg" alt="Orders">
+            </button>
+            <button class="nav-btn" onclick="openTab('explore')">
+                <img src="image3.jpeg" alt="Explore">
+            </button>
+        </div>
+    </header>
+
+    <div class="tab-content">
+        <div id="home" data-tab-content class="active">
+            <section class="spotlight-section">
+                <h3>Artist Spotlight</h3>
+                <div class="spotlight-row">
+                    <div class="spotlight-card"></div>
+                    <div class="spotlight-card"></div>
+                    <div class="spotlight-card"></div>
+                    <div class="spotlight-card"></div>
+                </div>
+            </section>
+
+            <section class="masonry-grid">
+                <div class="grid-item tall"></div>
+                <div class="grid-item short"></div>
+                <div class="grid-item medium"></div>
+                <div class="grid-item tall"></div>
+                <div class="grid-item medium"></div>
+                <div class="grid-item tall"></div>
+            </section>
+        </div>
+
+        <div id="orders" data-tab-content>
+            <div style="padding: 40px; text-align: center;">
+                <h1>My Orders</h1>
+                <p>You have no active orders.</p>
+            </div>
+        </div>
+
+        <div id="explore" data-tab-content>
+            <div style="padding: 40px; text-align: center;">
+                <h1>Explore & Settings</h1>
+                <p>Find new artists or adjust your profile.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabId) {
+            // Hide all tab content
+            const contents = document.querySelectorAll('[data-tab-content]');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Show the specific tab clicked
+            const activeTab = document.getElementById(tabId);
+            if (activeTab) {
+                activeTab.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
