@@ -30,8 +30,18 @@
             z-index: 1000;
         }
 
-        .logo-link { text-decoration: none; display: block; cursor: pointer; }
-        .logo { height: 60px; width: auto; display: block; }
+        .logo-link {text-decoration: none; 
+        display: block; 
+        cursor: pointer; 
+        height: 55px;}
+
+        .logo {height: 100px;            /* Increased size */
+        width: auto; 
+        display: block; 
+        margin-top: -20px;
+        margin-bottom: -10px;    /* Pulls the bottom edge up so the header doesn't expand */
+        position: relative;      /* Ensures it sits cleanly on top of other elements */
+        z-index: 1001;}
 
         .search-container {
             position: relative;
