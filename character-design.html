@@ -93,7 +93,7 @@
             display: block;
         }
 
-        /* --- EXPLORE CONTENT STYLES --- */
+        /* Masonry Grid */
         main {
             padding: 40px;
         }
@@ -102,37 +102,24 @@
             font-size: 36px;
             margin-bottom: 30px;
         }
-
-        .explore-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1400px;
-            margin: 0 auto;
+        
+        .masonry-grid {
+            column-count: 4;
+            column-gap: 15px;
         }
 
-        .card {
-            background-color: #c4c4c4; /* Gray placeholder color */
-            height: 200px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            transition: transform 0.2s ease, background-color 0.2s ease;
+        .grid-item {
+            background-color: #c4c4c4;
+            margin-bottom: 15px;
+            border-radius: 15px;
+            width: 100%;
+            display: inline-block;
         }
 
-        .interactive:hover {
-            transform: scale(1.03);
-            background-color: #b0b0b0;
-            cursor: pointer;
-        }
-
-        .card span {
-            pointer-events: none;
-        }
+        .short { height: 150px; }
+        .medium { height: 250px; }
+        .tall { height: 350px; }
+    
     </style>
 </head>
 <body>
@@ -144,7 +131,7 @@
 
         <div class="search-container">
             <img src="search.png" alt="search" class="search-icon">
-            <input type="text" placeholder=" ">
+            <input type="text" placeholder="Search...">
         </div>
 
         <div class="nav-buttons">
@@ -168,22 +155,18 @@
     </div>
 
     <main>
-        <h1>Explore</h1>
+        <h1>Character Design</h1>
         
-        <div class="explore-grid">
-            <div class="card interactive"><span>3D Art</span></div>
-            <div class="card interactive"><span>Animation</span></div>
-            
-            <a href="character-design.html" class="card interactive">
-                <span>Character Design</span>
-            </a>
-
-            <div class="card interactive"><span>Concept Art</span></div>
-            <div class="card interactive"><span>Fan Art</span></div>
-            <div class="card interactive"><span>Logo Design</span></div>
-            <div class="card interactive"><span>Pixel Art</span></div>
-            <div class="card interactive"><span>Tattoo Designs</span></div>
-            <div class="card interactive"><span>Styles</span></div>
+        <div class="masonry-grid">
+            <div class="grid-item tall"></div>
+            <div class="grid-item medium"></div>
+            <div class="grid-item short"></div>
+            <div class="grid-item tall"></div>
+            <div class="grid-item medium"></div>
+            <div class="grid-item tall"></div>
+            <div class="grid-item short"></div>
+            <div class="grid-item medium"></div>
+            <div class="grid-item short"></div>
         </div>
     </main>
 
