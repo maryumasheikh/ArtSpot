@@ -110,7 +110,7 @@
         .spotlight-card {
             min-width: 300px;
             height: 300px;
-            background-color: #bbb;
+            object-fit: cover; /*ensures images dont stretch*/
             border-radius: 15px;
             flex-shrink: 0;
         }
@@ -122,11 +122,10 @@
         }
 
         .grid-item {
-            background-color: var(--light-gray);
             margin-bottom: 15px;
             border-radius: 15px;
             width: 100%;
-            display: inline-block;
+            display: block; /* ensures images fill the grid item */
         }
 
         .short { height: 150px; }
@@ -164,22 +163,31 @@
     <div id="explore" class="active" data-tab-content>
         <h2>Artist Spotlight</h2>
         <div class="spotlight-row">
-            <div class="spotlight-card"></div>
-            <div class="spotlight-card"></div>
-            <div class="spotlight-card"></div>
-            <div class="spotlight-card"></div>
+            <!-- changed cards to images -->
+            <img src="home-images/IMG_3764.JPG" alt ="SpotLight 1" class="spotlight-card">
+            <img src="home-images/IMG_3775.JPG" alt ="SpotLight 2" class="spotlight-card">
+            <img src="home-images/IMG_3778.JPG" alt ="SpotLight 4" class="spotlight-card">
+            <img src="home-images/IMG_3765.JPG" alt ="SpotLight 3" class="spotlight-card">
+            <img src="home-images/IMG_3781.JPG" alt ="SpotLight 5" class="spotlight-card">
+            <img src="home-images/IMG_3782.JPG" alt ="SpotLight 6" class="spotlight-card">
         </div>
 
         <h2>Feed</h2>
         <div class="masonry-grid">
-            <div class="grid-item tall"></div>
-            <div class="grid-item medium"></div>
-            <div class="grid-item short"></div>
-            <div class="grid-item tall"></div>
-            <div class="grid-item medium"></div>
-            <div class="grid-item tall"></div>
-            <div class="grid-item short"></div>
-            <div class="grid-item medium"></div>
+            <img src="home-images/IMG_3762.JPG" class="grid-item" alt="Art">
+            <img src="home-images/IMG_3763.JPG" class="grid-item" alt="Art">
+            <img src="home-images/IMG_3773.JPG" class="grid-item" alt="Art">
+            <img src="home-images/IMG_3766.JPG" class="grid-item" alt="Art">
+            <img src="home-images/IMG_3767.JPG" class="grid-item" alt="Art">
+            <img src="home-images/IMG_3784.JPG" class="grid-item" alt="Art">
+            <img src="home-images/IMG_3783.JPG" class="grid-item" alt="Art">
+            <img src="home-images/IMG_3786.JPG" class="grid-item" alt="Art">
+            <img src="home-images/IMG_3787.JPG" class="grid-item" alt="Art">
+            <img src="home-images/IMG_3772.JPG" class="grid-item" alt="Art">
+            <img src="home-images/IMG_3768.JPG" class="grid-item" alt="Art">
+            <img src="home-images/IMG_3769.JPG" class="grid-item" alt="Art">
+            <img src="home-images/IMG_3770.JPG" class="grid-item" alt="Art">
+            <img src="home-images/IMG_3771.JPG" class="grid-item" alt="Art">
         </div>
     </div>
 
